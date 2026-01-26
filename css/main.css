@@ -103,12 +103,11 @@ body {
   margin-right: 0.313em;
 }
 hr {
-  hr {
   border: none;
   border-top: 1px solid hsl(215, 32%, 27%);
   margin-bottom: 0.938em;
 }
-}
+
 .creator-info {
   display: flex;
   justify-content: start;
