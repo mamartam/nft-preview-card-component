@@ -1,34 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png" />
     <title>NFT preview card component</title>
   </head>
   <body>
-    <main class="card">
-      <div class="image-container">
-        <div class="one">
-          <div class="three">
-            <img src="images/icon-view.svg" alt="" />
-          </div>
+    <main class="card-component">
+      <section class="img-section">
+        <img
+          class="main-img"
+          src="images/image-equilibrium.jpg"
+          alt="Equilibrium"
+        />
+        <div class="effect">
+          <img src="images/icon-view.svg" alt="icon-view" />
         </div>
-      </div>
-      <h1 class="card-title card-element">Equilibrium #3429</h1>
-      <p class="card-description card-element">
-        Our Equilibrium collection promotes balance and calm.
-      </p>
-      <div class="card-details">
-        <p class="card-price card-element"><span>0.041 ETH</span></p>
-        <p class="card-remaining-time card-element">3 days left</p>
-      </div>
-      <hr/>
-      <div class="creator-information">
-        <img src="images/image-avatar.png" alt="avatar" />
-        <p class="card-creator">
-          Creation of <span class="card-creator-name">Martha Masiuk</span>
+      </section>
+      <section class="general-info-section">
+        <h1 class="main-header">Equilibrium #3429</h1>
+        <p class="card-description">
+          Our Equilibrium collection promotes balance and calm.
         </p>
-      </div>
+        <div class="ethereum-clock-container">
+          <p><img src="images/icon-ethereum.svg" alt="ethereum" />0.041 ETH</p>
+          <p><img src="images/icon-clock.svg" alt="clock" />3 days left</p>
+        </div>
+        <div class="hr"></div>
+        <div class="creator-info">
+          <img src="images/image-avatar.png" alt="" />
+          <p>Creation of <span>Jules Wyvern</span></p>
+        </div>
+      </section>
     </main>
   </body>
 </html>
