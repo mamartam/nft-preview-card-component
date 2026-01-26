@@ -3,114 +3,129 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Outfit", sans-serif;
-  font-weight: normal;
 }
 body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Outfit", sans-serif;
+  font-weight: normal;
+  font-size: 1.125em;
   background-color: hsl(217, 54%, 11%);
 }
-main {
-  max-width: 350px;
+
+.card-component {
+  max-width: 18.75em;
   background-color: hsl(216, 50%, 16%);
-  padding: 20px;
-  border-radius: 15px;
-  margin: 20px;
-}
-/* --------------------------------- */
-.image-container {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  border-radius: 15px;
+  padding: 1.563em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.938em;
   overflow: hidden;
+  margin: 1.563em;
 }
-
-.one {
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/image-equilibrium.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.three {
-  position: absolute;
-  inset: 0;
-  background-color: hsla(178, 100%, 50%, 0.5);
+.img-section {
+  display: block;
+  max-width: 15.625em;
+  border-radius: 0.313em;
+  overflow: hidden;
+  margin-bottom: 0.938em;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  cursor: pointer;
 }
-
-.image-container:hover .three {
-  opacity: 1;
+.main-img {
+  display: block;
+  max-width: 15.625em;
+  position: relative;
+  z-index: 2;
 }
-.three img {
+.effect {
+  transition: background-color 0.4s linear;
+}
+.effect img {
+  display: none;
+}
+.img-section:hover .effect {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(178, 100%, 50%, 0.5);
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-section:hover .effect img {
   display: block;
 }
 
-/* ---------------------------------- */
-.card-title {
+.main-header {
   color: hsl(0, 0%, 100%);
+  font-size: 1em;
+  margin-bottom: 1.25em;
+  font-weight: 500;
+  transition: color 0.3s linear;
 }
-p {
-  color: hsl(215, 51%, 70%);
-  font-size: 18px;
-}
-.card-price span {
-  color: hsl(178, 100%, 50%);
-}
-.card-creator-name {
-  color: hsl(0, 0%, 100%);
-}
-
-/* ---------------------------------- */
-.card-element {
-  margin-bottom: 20px;
-}
-.card-details {
-  display: flex;
-  justify-content: space-between;
-}
-.card-price::before {
-  content: url(../images/icon-ethereum.svg);
-  vertical-align: middle;
-  margin-right: 5px;
-}
-.card-remaining-time::before {
-  content: url(../images/icon-clock.svg);
-  vertical-align: middle;
-  margin-right: 5px;
-}
-/* ---------------------------------- */
-hr {
-  margin-bottom: 20px;
-  border: none;
-  border-bottom: 0.05px solid hsl(215, 51%, 70%);
-}
-.creator-information {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
-.creator-information img {
-  max-width: 30px;
-  border: 1px solid hsl(0, 0%, 100%);
-  border-radius: 50%;
-  margin-right: 20px;
-}
-.card-title:hover {
+.main-header:hover {
   color: hsl(178, 100%, 50%);
   cursor: pointer;
 }
-.card-creator-name:hover {
+.card-description {
+  color: hsl(215, 51%, 70%);
+  font-size: 0.85em;
+  margin-bottom: 1.25em;
+  font-weight: 300;
+}
+.ethereum-clock-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25em;
+}
+.ethereum-clock-container p {
+  display: flex;
+  align-items: center;
+  font-size: 0.85em;
+}
+.ethereum-clock-container p:first-of-type {
+  color: hsl(178, 100%, 50%);
+}
+.ethereum-clock-container p:last-of-type {
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+}
+.ethereum-clock-container p img {
+  margin-right: 0.313em;
+}
+.hr {
+  border-bottom: 0.063em solid hsl(215, 32%, 27%);
+  margin-bottom: 0.938em;
+}
+.creator-info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: hsl(215, 51%, 70%);
+}
+.creator-info img {
+  width: 2.188em;
+  border: 0.063em solid hsl(0, 0%, 100%);
+  margin-right: 0.625em;
+  border-radius: 50%;
+}
+.creator-info p {
+  font-size: 0.85em;
+}
+.creator-info p span {
+  color: hsl(0, 0%, 100%);
+  transition: color 0.3s linear;
+}
+.creator-info p span:hover {
   color: hsl(178, 100%, 50%);
   cursor: pointer;
 }
